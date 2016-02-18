@@ -1,0 +1,93 @@
+    cout << "12345000 = " << BigInt( 12345000 ) << endl;
+    BigInt b = BigInt( 12345000 );
+    cout << "12345000 = " << b << endl;
+    BigInt c; c = b;
+    cout << "12345000 = " << c << endl;
+    cout << "1234567890 = " << BigInt( ( long double )1234567890.49999 ) << endl;
+    cout << endl;
+
+    cout << "Addition and subtraction:" << endl;
+    cout << "123 + 234 = " << ( BigInt( 123 ) + 234 ).toInt() << endl;
+    cout << "243 + 999 = " << ( BigInt( 243 ) + BigInt( 999 ) ) << endl;
+    cout << "-123 + -321 = " << ( BigInt( -123 ) + BigInt( -321 ) ) << endl;
+    cout << "-123 + 321 = " << ( BigInt( -123 ) + BigInt( 321 ) ) << endl;
+    cout << "-2 + 5 = " << ( BigInt( -2 ) + 5 ) << endl;
+    cout << "-2 + 5 = " << ( BigInt( -2 ) + BigInt( 5 ) ) << endl;
+    cout << "-2 + -5 = " << ( BigInt( -2 ) + -5 ) << endl;
+    cout << "-2 + -5 = " << ( BigInt( -2 ) + BigInt( -5 ) ) << endl;
+    cout << "0 + -5 = " << ( BigInt( 0 ) + -5 ) << endl;
+    cout << "0 + -5 = " << ( BigInt( 0 ) + BigInt( -5 ) ) << endl;
+    cout << "4567 - 1234 = " << ( 4567 - BigInt( 1234 ) ) << endl;
+    cout << "345 - 46 = " << ( BigInt( 345 ) - BigInt( 46 ) ) << endl;
+    cout << "2 - 6 = " << ( BigInt( 2 ) - BigInt( 6 ) ) << endl;
+    cout << "2 - 6 = " << ( BigInt( 2 ) - 6 ) << endl;
+    cout << "0 - 5 = " << ( BigInt( 0 ) - 5 ) << endl;
+    cout << "0 - 5 = " << ( BigInt( 0 ) - BigInt( 5 ) ) << endl;
+    cout << "0 - -5 = " << ( BigInt( 0 ) - -5 ) << endl;
+    cout << "0 - -5 = " << ( BigInt( 0 ) - BigInt( -5 ) ) << endl;
+    cout << "10000 - 10000 = " << ( BigInt( 10000 ) - 10000 ) << endl;
+    cout << "10000 - 10110 = " << ( BigInt( 10000 ) - 10110 ) << endl;
+    cout << "4567 - 4568 = " << ( BigInt( 4567 ) - 4568 ) << endl;
+    cout << "-4567 - -4568 = " << ( BigInt( -4567 ) - BigInt( -4568 ) ) << endl;
+    cout << "999 - 9999 = " << ( BigInt( 999 ) - 9999 ) << endl;
+    cout << "2000000000 + 2000000000 + 2000123456 = " << ( BigInt( 2000000000 ) + 2000000000 + BigInt( 2000123456 ) ) << endl;
+    cout << "-34567 + 34568 = " << ( BigInt( -34567 ) + BigInt( 34568 ) ) << endl;
+    cout << "10 - 1 = " << ( BigInt( 10 ) - 1 ) << endl;
+    cout << "1 - 10 = " << ( BigInt( 1 ) - 10 ) << endl;*/
+  
+    cout<<"12345000874864586435486454845474684686748468468 + 123450008748645864354864548454746846867484684681856418435484\n"<<(
+		BigInt("12345000874864586435486454845474684686748468468")
+		+
+		BigInt("123450008748645864354864548454746846867484684681856418435484")) <<endl;
+
+   cout << "Multiplication/division:" << endl;
+    cout << "128 * 512 = " << ( BigInt( 128 ) * 512 ) << endl;
+    cout << "0 * 12345 = " << ( BigInt( 0 ) * 12345 ) << endl;
+    cout << "-123 * 0 = " << ( BigInt( -123 ) * 0 ) << endl;
+    cout << "-12345 * 1000001 = " << ( BigInt( -12345 ) * BigInt( 1000001 ) ) << endl;
+    cout << "-1 * -1 = " << ( BigInt( -1 ) * BigInt( -1 ) ) << endl;
+    cout << "1024 / 2 = " << ( BigInt( 1024 ) / 2 ) << endl;
+    cout << "-525474 / -789 = " << ( BigInt( -525474 ) / -789 ) << endl;
+    cout << "-81 / 27 = " << ( BigInt( -81 ) / 27 ) << endl;
+    cout << "0 / -888 = " << ( BigInt( 0 ) / -888 ) << endl;
+    cout << "1024 / 2 = " << ( BigInt( 1024 ) / BigInt( 2 ) ) << endl;
+    cout << "-525474 / -789 = " << ( BigInt( -525474 ) / BigInt( -789 ) ) << endl;
+    cout << "-81 / 27 = " << ( BigInt( -81 ) / BigInt( 27 ) ) << endl;
+    cout << "0 / -888 = " << ( BigInt( 0 ) / BigInt( -888 ) ) << endl;
+    BigInt q = 1023;
+    int rem = q.divide( 2 );
+    cout << "1023 / 2 = " << q << " + " << rem << "/2" << endl;
+    q = 1219255159;
+    rem = q.divide( 98765 );
+    cout << "1219255159 / 98765 = " << q << " + " << rem << "/98765" << endl;
+    q = 121;
+    rem = q.divide( 11 );
+    cout << "121 / 11 = " << q << " + " << rem << "/11" << endl;
+    q = 1023;
+    BigInt rem2 = q.divide( BigInt( 2 ) );
+    cout << "1023 / 2 = " << q << " + " << rem2 << "/2" << endl;
+    q = 1219255159;
+    rem2 = q.divide( BigInt( 98765 ) );
+    cout << "1219255159 / 98765 = " << q << " + " << rem2 << "/98765" << endl;
+    q = 121;
+    rem2 = q.divide( BigInt( 11 ) );
+    cout << "121 / 11 = " << q << " + " << rem2 << "/11" << endl;
+    q = 9999;
+    rem2 = q.divide( BigInt( 9 ) );
+    cout << "9999 / 9 = " << q << " + " << rem2 << "/9" << endl;
+    cout << "1024 * 15.37 = " << BigInt( 1024 ) * 15.37l << endl;
+    cout << "100 * 0.5 = " << BigInt( 100 ) * 0.5l << endl;
+    cout << "123456789 * 0.123456789 = " << BigInt( 123456789 ) * 0.123456789l << endl;
+    cout << "4286 * -0.5 = " << BigInt( 4286 ) * -0.5l << endl;
+    cout << "29384723 * 1.0 = " << BigInt( 29384723 ) * 1.0l << endl;
+    cout << "29384723 * -1.0 = " << BigInt( 29384723 ) * -1.0l << endl;
+    cout << "3874928345 * 0.0 = " << BigInt( "3874928345" ) * 0.0l << endl;
+    BigInt n = 1000;
+    cout << "n = 1000: n*n*(8+n*(12+n*(3+n*n))) = " << n*n*(8+n*(12+n*(3+n*n))) << endl;
+    
+    cout << endl;
+
+ 
+   
+    //cout<<"12345000874864586435486454845474684686748468468 + 123450008748645864354864548454746846867484684681856418435484\n"<<(BigInt(12345000874864586435486454845474684686748468468)+BigInt(123450008748645864354864548454746846867484684681856418435484);
+    //cout << "243 + 999 = " << ( BigInt( 24345454878 ) + BigInt( 468748187838371878687899947858486 ) ) << endl;
